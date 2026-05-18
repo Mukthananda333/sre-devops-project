@@ -1,0 +1,7 @@
+services:
+  node-app:
+    image: mukthananda444/sre-devops-app:v1
+    container_name: sre-devops-container
+
+    ports:
+      - "3000:3000"

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sre-devops-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sre-devops-app
+  template:
+    metadata:
+      labels:
+        app: sre-devops-app
+    spec:
+      containers:
+      - name: sre-devops-container
+        image: mukthananda444/sre-devops-app:v1
+        ports:
+        - containerPort: 3000
